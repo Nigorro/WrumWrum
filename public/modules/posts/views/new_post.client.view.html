@@ -1,0 +1,33 @@
+<div data-ng-controller="NewPostController" class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <button class="md-raised md-warn md-button md-default-theme" ng-transclude=""><span class="ng-scope">Warn</span><div class="md-ripple-container"></div></button>
+        <article  class="category-people category-photography category-pretty-girls entry box format-image">
+            <div  ng-show='inProcess'  class="alert alert-success alert-dismissible" role="alert">
+          <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span></button>
+          <strong>Успех!</strong> Ваша запись добавлена. Она появиться на главной странице после модерации
+        </div>
+        <div class="new-post__container">
+            <div ng-app="fileUpload" class="upload_file">
+                <div class="btn btn-primary" ngf-select ng-model="files" ngf-multiple="multiple">Загрузить фотографию</div>
+                <div ngf-drop ngf-select ng-model="files" class="drop-box" 
+                    ngf-drag-over-class="dragover" ngf-multiple="true" ngf-allow-dir="true"
+                    accept="image/*,application/pdf">Перенесите фото сюда или кликните </div>
+                <div ngf-no-file-drop>Функция Drag/Drop не поддерживается вашим браузером</div>
+                <img ng-show="params.image" class="image_preview" ng-src="{{params.image}}">
+            </div>
+
+            <form novalidate name="postForm" class="form-horizontal newPost"  ng-submit="newPost()">
+                <div class="form-group" >
+                    <textarea type="text" ng-model="params.description" placeholder="Описание" rows="10"/></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="text" ng-model="params.carNumber" placeholder="Номер машины" />
+                </div>
+                <div class="form-group text-center"  ng-class="{'has-success':1, 'has-warning':1}">
+                  <button ng-disabled="postForm.$invalid" type="submit" class="btn btn-primary">Отправить</button>
+                </div>
+            </form>
+        </div>
+        </article>
+      </div>
+</div>

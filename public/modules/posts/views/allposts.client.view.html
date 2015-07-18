@@ -1,0 +1,22 @@
+<div data-ng-controller="AllPosts">
+    <!-- {{posts}} -->
+    <br><br>
+    <div class="row">
+        <div ng-repeat="post in posts" class="col-md-4 col-lg-4 col-xs-4">
+            <div class="post">
+                <div class="post__image-container" ui-sref="post({id:post._id})">
+                    <img class="post_img" src="{{post.image}}">
+                    <p class="post__like"><span class="glyphicon glyphicon-thumbs-up"></span><span class="position_static">123</span><span class="glyphicon glyphicon-thumbs-down"></span></p>
+                    <p class="post__car-number">{{post.carNumber}}</p>
+                    <p class="post__views"><span class="glyphicon glyphicon-eye-open"></span>13120</p>
+                    <div class="post__gradient"></div>
+                </div>
+               <!--  <div class="post__content">
+                    <p class="post__content-description">
+                        {{post.description}}
+                    </p>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</div>

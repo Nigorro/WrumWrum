@@ -1,0 +1,117 @@
+/*
+ *Post style 
+*/
+.post {
+  border: 1px solid rgb(132, 132, 132);
+  margin-bottom: 33px;
+  cursor: pointer;
+}
+.post__image-container {
+  position: relative;
+}
+.post_img{
+    width: 100%;
+}
+.post__like, .post__views, .post__car-number {
+  position: absolute;
+  bottom: 11px;
+  margin: 0;
+  font-size: 18px;
+  color: #fff;
+  z-index: 10;
+}
+.post__like {
+  left: 11px;
+}
+.post__like span, .post__views span {
+  padding-right: 5px;
+  position: relative;
+  top: 2px;
+}
+.post__views {
+  right: 11px;
+}
+.post__car-number {
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.post__content {
+  padding: 5px 11px 11px;
+  font-style: 16px;
+}
+.post__content  p {
+  margin: 0;
+}
+/*.post__image-container:after {
+  content: '';
+  opacity: 0;
+  position:  absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(212,228,239,0);
+  background: -moz-linear-gradient(top, rgba(212,228,239,0) 62%, rgba(212,228,239,0.03) 63%, rgba(134,174,204,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(62%, rgba(212,228,239,0)), color-stop(63%, rgba(212,228,239,0.03)), color-stop(100%, rgba(134,174,204,1)));
+  background: -webkit-linear-gradient(top, rgba(212,228,239,0) 62%, rgba(212,228,239,0.03) 63%, rgba(134,174,204,1) 100%);
+  background: -o-linear-gradient(top, rgba(212,228,239,0) 62%, rgba(212,228,239,0.03) 63%, rgba(134,174,204,1) 100%);
+  background: -ms-linear-gradient(top, rgba(212,228,239,0) 62%, rgba(212,228,239,0.03) 63%, rgba(134,174,204,1) 100%);
+  background: linear-gradient(to bottom, rgba(212,228,239,0) 62%, rgba(212,228,239,0.03) 63%, rgba(134,174,204,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d4e4ef', endColorstr='#86aecc', GradientType=0 );
+}*/
+
+.position_static {
+  position: static;
+}
+
+
+/*
+ *New post style
+*/
+.new-post__container {
+	background: #fff;
+	padding: 22px;
+	margin: 0 auto;
+	width: 300px;
+}
+.new-post__container input{
+	width: 100%;
+	padding: 5px 10px;
+}
+.text_block {
+	background: #fff;
+	padding: 11px 22px;
+}
+
+.upload_file {
+	text-align: center;
+}
+.upload_file .btn {
+	width: 100%;
+}
+.image_preview {
+	width: 100%;
+  margin: 11px -11px;
+}
+.button {
+  -moz-appearance: button;
+  /* Firefox */
+  -webkit-appearance: button;
+  /* Safari and Chrome */
+  padding: 10px;
+  margin: 10px;
+  width: 70px;
+}
+.drop-box {
+  background: rgba(96, 157, 214, 0.14);
+  border: 5px dashed #428BCA;
+  text-align: center;
+  margin: 11px 0;
+  padding: 11px;
+}
+.dragover {
+    border: 5px dashed blue;
+}
