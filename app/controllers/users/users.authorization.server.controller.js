@@ -21,6 +21,26 @@ exports.userByID = function(req, res, next, id) {
     });
 };
 
+
+/**
+ * find User
+ */
+exports.findUser = function(req, res, next) {
+    console.log(req.query.userId);
+    var id = req.query.userId;
+    User.findOne({
+        _id: id
+    },{ 
+        'password':0,
+        'roles': 0, 
+        'resetPasswordToken': 0, 
+        'resetPasswordExpires': 0,
+        'provider': 0}).exec(function(err, user) {
+        if (err) return next(err);
+        if (!user) return next(new Error('Failed to load User ' + id));
+        return res.send({ status: 'OK', user:user });
+    });
+};
 /**
  * Require login routing middleware
  */
